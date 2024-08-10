@@ -742,6 +742,47 @@
         
             /*=====  End of Fields  ======*/
         </style>
+
+
+
+
+
+        /*=====  View Counter  ======*/
+        <div id="showViewCounter">'
+          <div class="space-y-4">
+            <button id="toggleButton" class="whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 flex items-center justify-between">
+                <span>Show More</span>
+            </button>
+            <div id="collapsibleContent" style="display: none;">
+              <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+              <div class="elfsight-app-d9672707-f4d8-478f-92ff-d23b06a85e5d" data-elfsight-app-lazy></div>
+            </div>
+        </div>
+        
+        <script>
+        (function() {
+            var toggleButton = document.getElementById('toggleButton');
+            var collapsibleContent = document.getElementById('collapsibleContent');
+            var buttonText = toggleButton.querySelector('span');
+        
+            function toggleContent() {
+                if (collapsibleContent.style.display === 'none') {
+                    collapsibleContent.style.display = 'block';
+                    buttonText.textContent = 'Show Less';
+                } else {
+                    collapsibleContent.style.display = 'none';
+                    buttonText.textContent = 'Show More';
+                }
+            }
+        
+            toggleButton.addEventListener('click', toggleContent);
+        })();
+        </script>
+        </div>
+        /*=====  End of ViewCounter  ======*/
+
+
+        
       </section>
 
     </div>
