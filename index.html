@@ -383,6 +383,40 @@
       <section id="projects" class="projects-section p-3 p-lg-5 d-flex flex-column">
         <div class="my-auto">
             <h2 class="mb-5">Projects</h2>
+
+              <!-- Licence Plate Recongnition System-->
+              <div class="project-item d-flex flex-column flex-md-row mb-5">
+                <div class="project-content mr-auto">
+                    <h3 class="mb-0">License Plate Recognition System</h3>
+                    <div class="subheading mb-3"></div>
+                    <ul>
+                        <li>Developed a license plate detection system by implementing image processing techniques to identify and locate license plates on vehicles.</li>
+                        <li>Converted images to grayscale and then to binary to simplify the detection process, applying connected component analysis (CCA) to identify and label connected regions in the binary image.</li>
+                        <li>Used morphological processing and edge detection to enhance the identification of potential license plate regions, refining the results by filtering based on characteristics such as shape and size.</li>
+                        <li>Implemented vertical projection to further distinguish license plate regions from other similar objects like headlamps or stickers.</li>
+                        <li>Segmented characters on the identified license plates using CCA and resized each character to a standard 20px by 20px for recognition.</li>
+                        <li>Applied supervised machine learning for character recognition, utilizing Support Vector Classifiers (SVC) with a training dataset of character images to achieve high accuracy in predicting license plate characters.</li>
+                        <li>Validated the model with 4-fold cross-validation and saved the trained model for future predictions.</li>
+                    </ul>
+                </div>
+              </div>
+
+              <div class="project-item d-flex flex-column flex-md-row mb-5">
+                <div class="project-content mr-auto">
+                    <h3 class="mb-0">Traffic Signs Classification with a Convolutional Network</h3>
+                    <div class="subheading mb-3"></div>
+                    <ul>
+                        <li>Classified traffic signs from the German Traffic Sign Dataset, consisting of 39,209 training images and 12,630 test images, each 32×32 pixels in RGB color space.</li>
+                        <li>Addressed class imbalance through data augmentation techniques including flipping, rotation, projection, and jittering, extending the dataset to 63,538 images.</li>
+                        <li>Applied preprocessing steps such as scaling pixel values to [0, 1], one-hot encoding labels, and localized histogram equalization to enhance feature extraction.</li>
+                        <li>Utilized grayscale images to simplify the model, leveraging only the Y channel from the YCbCr color space for improved performance.</li>
+                        <li>Designed a convolutional neural network (CNN) with 3 convolutional layers and 1 fully connected layer, incorporating multi-scale features and dropout regularization to prevent overfitting.</li>
+                        <li>Implemented L2 regularization and early stopping with a patience of 100 epochs to optimize training and prevent overfitting.</li>
+                        <li>Trained the model in two stages: pre-training with an extended dataset and fine-tuning with a balanced dataset, achieving a test set accuracy of 99.33%.</li>
+                        <li>Visualized learned filters from the first convolutional layer to analyze feature detection, and evaluated model performance by reviewing misclassified examples and out-of-scope predictions.</li>
+                    </ul>
+                </div>
+              </div>
             
             <div class="project-item d-flex flex-column flex-md-row mb-5">
                 <div class="project-content mr-auto">
